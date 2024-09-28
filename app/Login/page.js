@@ -25,16 +25,15 @@ const Login = () => {
                     <span className="text-yellow-500">e</span>
                 </div>
                 <div className="flex justify-end items-center">
-                    <div className="bg-amber-100 rounded text-black ml-3 font-semibold px-2 py-2">Home</div>
-                    <div className="bg-amber-100 rounded text-black ml-3 font-semibold px-2 py-2">About</div>
-                    <div className="bg-amber-100 rounded text-black ml-3 font-semibold px-2 py-2">Services</div>
+                    <div className="bg-amber-100 rounded text-black ml-3 font-semibold px-2 py-2">Sign Up</div>
                 </div>
             </div>
 
             {/* Login Form */}
             <div className="flex justify-center items-center h-screen">
-                <div className="bg-black shadow-md rounded-lg p-8 w-full max-w-md">
-                    <h2 className="text-2xl font-bold mb-6 text-center">Sign in to your account</h2>
+                <div className="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
+                <h2 className="text-2xl font-bold mb-6 text-center text-black">Log in to CustMe</h2>
+                {/* <h2 className="text-2xl font-bold mb-6 text-center">Log in to CustMe</h2>*/}
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="username" className="block font-medium text-gray-700 mb-2">Username:</label>
