@@ -1,33 +1,55 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Box, Button, Avatar, Paper, List, ListItem, ListItemText, TextField, IconButton, Card, CardContent } from '@mui/material';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  Box,
+  Button,
+  Avatar,
+  List,
+  ListItem,
+  ListItemText,
+  TextField,
+  IconButton,
+  Card,
+  CardContent,
+} from '@mui/material';
 import { Search, Notifications } from '@mui/icons-material';
 
 function Dashboard() {
   return (
-    <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', minHeight: '100vh', bgcolor: '#f9f9f9' }}>
       {/* Sidebar */}
-      <Box sx={{ width: 250, bgcolor: '#2196f3', color: 'white', p: 2 }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+      <Box
+        sx={{
+          width: 250,
+          bgcolor: '#2196f3', // Original blue color
+          color: 'white',
+          p: 3,
+          boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+        }}
+      >
+        <Box sx={{ display: 'flex', alignItems: 'center', mb: 3 }}>
           <Avatar src="/path/to/avatar.jpg" alt="User" />
-          <Typography variant="h6" sx={{ ml: 2 }}>Mel Anthony Rusiana</Typography>
+          <Typography variant="h6" sx={{ ml: 2 }}>
+            Mel Anthony Rusiana
+          </Typography>
         </Box>
         <List>
-          <ListItem button>
-            <ListItemText primary="Dashboard" />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="Chats" />
-          </ListItem>
-          <ListItem button>
-            <ListItemText primary="Orders" />
-          </ListItem>
+          {['Dashboard', 'Chats', 'Orders'].map((text) => (
+            <ListItem button key={text} sx={{ '&:hover': { bgcolor: 'rgba(255, 255, 255, 0.1)' } }}>
+              <ListItemText primary={text} />
+            </ListItem>
+          ))}
         </List>
-        <Button variant="contained" color="secondary" sx={{ mt: 2 }}>Logout</Button>
+        <Button variant="contained" color="error" sx={{ mt: 2, width: '100%' }}>
+          Logout
+        </Button>
       </Box>
 
       {/* Main Content */}
-      <Box sx={{ flexGrow: 1, p: 3, bgcolor: '#e3f2fd' }}>
-        <AppBar position="static" color="default" sx={{ mb: 3 }}>
+      <Box sx={{ flexGrow: 1, p: 3 }}>
+        <AppBar position="static" sx={{ bgcolor: '#ffffff', boxShadow: 'none', mb: 3 }}>
           <Toolbar>
             <Typography variant="h6" sx={{ flexGrow: 1 }}>
               Dashboard
@@ -36,7 +58,7 @@ function Dashboard() {
               variant="outlined"
               size="small"
               placeholder="Search..."
-              sx={{ bgcolor: 'white', borderRadius: 1 }}
+              sx={{ bgcolor: 'white', borderRadius: 1, width: '250px', '& .MuiOutlinedInput-root': { borderRadius: 1 } }}
               InputProps={{
                 endAdornment: (
                   <IconButton>
@@ -45,7 +67,7 @@ function Dashboard() {
                 ),
               }}
             />
-            <IconButton color="inherit">
+            <IconButton color="inherit" sx={{ ml: 2 }}>
               <Notifications />
             </IconButton>
           </Toolbar>
@@ -54,13 +76,25 @@ function Dashboard() {
         {/* Job Listings */}
         <Box>
           {["Nadiye Ainara", "Mairenn LaToya", "Epa Mireille"].map((name, index) => (
-            <Card sx={{ mb: 3 }} key={index}>
+            <Card
+              sx={{
+                mb: 2,
+                borderRadius: 2,
+                boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+                transition: 'transform 0.3s, box-shadow 0.3s',
+                '&:hover': {
+                  transform: 'translateY(-5px)',
+                  boxShadow: '0 8px 30px rgba(0,0,0,0.2)',
+                },
+              }}
+              key={index}
+            >
               <CardContent>
                 <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                   <Avatar src={`/path/to/avatar${index + 1}.jpg`} sx={{ mr: 2 }} />
                   <Box>
                     <Typography variant="h6">{name}</Typography>
-                    <Typography variant="caption" color="textSecondary">1m ago</Typography>
+                    <Typography variant="caption" color="text.secondary">1m ago</Typography>
                   </Box>
                 </Box>
                 <Typography variant="body2" sx={{ mb: 2 }}>
@@ -69,8 +103,8 @@ function Dashboard() {
                   {index === 2 && "I need a custom T-shirt design for our upcoming family reunion. Interested designers, please message me with your ideas and portfolio."}
                 </Typography>
                 <Box sx={{ display: 'flex', gap: 1 }}>
-                  <Button variant="contained" color="success">Apply</Button>
-                  <Button variant="contained" color="error">I'm not Interested</Button>
+                  <Button variant="contained" color="success" sx={{ flex: 1 }}>Apply</Button>
+                  <Button variant="outlined" color="error" sx={{ flex: 1 }}>I'm not Interested</Button>
                 </Box>
               </CardContent>
             </Card>
