@@ -42,7 +42,7 @@ function ProfileDashboard() {
         <Paper sx={{ mb: 3, p: 3 }}>
           <Box sx={{ display: 'flex', alignItems: 'center', position: 'relative' }}>
             <Box sx={{ width: '100%', height: 150, bgcolor: '#000', borderRadius: 1, mb: 8 }}></Box>
-            <Avatar src="/path/to/avatar.jpg" sx={{ width: 100, height: 100, position: 'absolute', top: 100, left: 20, border: '3px solid white' }} />
+            <Avatar src="https://www.google.com/imgres?q=landscape&imgurl=https%3A%2F%2Fcdn.prod.website-files.com%2F63a02e61e7ffb565c30bcfc7%2F65ea99845e53084280471b71_most%2520beautiful%2520landscapes%2520in%2520the%2520world.webp&imgrefurl=https%3A%2F%2Fwww.arkaenergy.com%2Flearn%2Fbeautiful-landscapes&docid=KzD_rF0Jf8f3UM&tbnid=yNAW-cLzpAq50M&vet=12ahUKEwjGsa7N_t-JAxV3mq8BHSe9KmwQM3oECFwQAA..i&w=2304&h=1248&hcb=2&ved=2ahUKEwjGsa7N_t-JAxV3mq8BHSe9KmwQM3oECFwQAA" sx={{ width: 100, height: 100, position: 'absolute', top: 100, left: 20, border: '3px solid white' }} />
             <Box sx={{ ml: 15 }}>
               <Typography variant="h5">Mel Anthony Rusiana</Typography>
               <Button variant="outlined" sx={{ mt: 1 }}>Edit Profile</Button>
@@ -67,9 +67,9 @@ function ProfileDashboard() {
               <Button variant="outlined" startIcon={<Create />}>Create Post</Button>
             </Box>
             <Box sx={{ display: 'flex', gap: 2, overflowX: 'auto' }}>
-              <img src="/path/to/project1.jpg" alt="Project 1" style={{ width: '100%', maxWidth: '150px', borderRadius: 4 }} />
-              <img src="/path/to/project2.jpg" alt="Project 2" style={{ width: '100%', maxWidth: '150px', borderRadius: 4 }} />
-              <img src="/path/to/project3.jpg" alt="Project 3" style={{ width: '100%', maxWidth: '150px', borderRadius: 4 }} />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN8hy2bKMrXY2-a2Cw2P8-j5M9PDgGdfVUrQ&s" style={{ width: '100%', maxWidth: '150px', borderRadius: 4 }} />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEpF4wiQzQP4dEqF8xisjzJ8yWzzHUbE8sQ&s" style={{ width: '100%', maxWidth: '150px', borderRadius: 4 }} />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV530P4EmevxpD1RGmRKVBlZBy3D9xG06E8A&s" style={{ width: '100%', maxWidth: '150px', borderRadius: 4 }} />
             </Box>
           </Box>
         </Paper>
@@ -79,3 +79,4 @@ function ProfileDashboard() {
 }
 
 export default ProfileDashboard;
+
